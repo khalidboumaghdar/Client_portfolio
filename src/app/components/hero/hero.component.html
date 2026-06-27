@@ -7,7 +7,7 @@
 
       <div class="hero__cta">
         <a class="btn btn--primary" href="#experience">View experience</a>
-        <a class="btn btn--ghost" [href]="'mailto:' + profile.email">Get in touch</a>
+        <a class="btn btn--ghost" href="assets/Fatima_Ezzahra_ADNIBI_CV_Data_Analyst-2-1-1.pdf" download="Fatima_Ezzahra_ADNIBI">Download Resume</a>
       </div>
 
       <div class="hero__metrics">
@@ -18,40 +18,15 @@
       </div>
     </div>
 
-    <div class="hero__panel" aria-hidden="true">
-      <div class="panel">
-        <div class="panel__header">
-          <span class="panel__dot"></span>
-          <span class="panel__title">weekly_dashboard_load.pbix</span>
-        </div>
-
-        <div class="panel__body">
-          <div class="panel__row">
-            <span class="panel__label">ETL_STATUS</span>
-            <span class="panel__status">SYNCED</span>
-          </div>
-
-          <div class="bars">
-            <div
-              class="bars__col"
-              *ngFor="let h of weeklyBars; let i = index"
-              [style.height.%]="h"
-              [style.animation-delay.ms]="i * 80"
-            ></div>
-          </div>
-
-          <div class="panel__footer">
-            <div class="kpi">
-              <span class="kpi__num">94.2%</span>
-              <span class="kpi__label">data quality</span>
-            </div>
-            <div class="kpi">
-              <span class="kpi__num">12</span>
-              <span class="kpi__label">sources merged</span>
-            </div>
-          </div>
-        </div>
+    <div class="hero__photo">
+      <div class="photo__frame">
+        <img
+          src="assets/images/fatima-profile.png"
+          alt="Portrait of Fatima Ezzahra Adnibi"
+          class="photo__img"
+        />
       </div>
+      <div class="photo__accent" aria-hidden="true"></div>
     </div>
   </div>
 </section>

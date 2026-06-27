@@ -9,6 +9,5 @@ import { PROFILE, METRICS } from '../../data/portfolio-data';
 export class HeroComponent {
   profile = PROFILE;
   metrics = METRICS;
-
-  weeklyBars = [38, 52, 41, 67, 58, 73, 64];
 }
+
