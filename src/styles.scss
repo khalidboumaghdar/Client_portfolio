@@ -1,0 +1,79 @@
+/* ============================================
+   DESIGN TOKENS — Data Analyst Portfolio
+   ============================================ */
+:root {
+  /* Color */
+  --bg-deep:        #0B1929;
+  --bg-panel:       #11202F;
+  --bg-panel-alt:   #1A2C3D;
+  --line:           #233547;
+  --accent:         #2DD4BF;
+  --accent-dim:     #1B8F82;
+  --accent-soft:    rgba(45, 212, 191, 0.12);
+  --text-primary:   #F1F5F4;
+  --text-secondary: #9FB3C4;
+  --text-muted:     #5E7488;
+  --warn-amber:     #E8B339;
+
+  /* Type */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body:    'Inter', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* Layout */
+  --max-width: 1180px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(45,212,191,0.06) 0%, transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(45,212,191,0.04) 0%, transparent 40%);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p { margin: 0; line-height: 1.6; color: var(--text-secondary); }
+
+a { color: var(--accent); text-decoration: none; }
+
+::selection { background: var(--accent-soft); color: var(--text-primary); }
+
+/* Focus visibility */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--line); border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-dim); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

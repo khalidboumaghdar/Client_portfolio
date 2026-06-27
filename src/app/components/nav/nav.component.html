@@ -1,0 +1,26 @@
+<nav class="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#top">{{ profile.name }}</a>
+
+    <div class="nav__links">
+      <a
+        class="nav__link"
+        *ngFor="let l of links"
+        [href]="l.href"
+      >{{ l.label }}</a>
+    </div>
+
+    <button class="nav__toggle" (click)="toggle()" [attr.aria-expanded]="open" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="nav__mobile" *ngIf="open">
+    <a
+      class="nav__mobile-link"
+      *ngFor="let l of links"
+      [href]="l.href"
+      (click)="close()"
+    >{{ l.label }}</a>
+  </div>
+</nav>

@@ -1,0 +1,57 @@
+<section class="hero" id="top">
+  <div class="hero__inner">
+    <div class="hero__text">
+      <p class="hero__eyebrow">DATA ANALYST · BI &amp; MACHINE LEARNING</p>
+      <h1 class="hero__name">{{ profile.name }}</h1>
+      <p class="hero__tagline">{{ profile.tagline }}</p>
+
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#experience">View experience</a>
+        <a class="btn btn--ghost" [href]="'mailto:' + profile.email">Get in touch</a>
+      </div>
+
+      <div class="hero__metrics">
+        <div class="metric" *ngFor="let m of metrics">
+          <span class="metric__value">{{ m.value }}</span>
+          <span class="metric__label">{{ m.label }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__panel" aria-hidden="true">
+      <div class="panel">
+        <div class="panel__header">
+          <span class="panel__dot"></span>
+          <span class="panel__title">weekly_dashboard_load.pbix</span>
+        </div>
+
+        <div class="panel__body">
+          <div class="panel__row">
+            <span class="panel__label">ETL_STATUS</span>
+            <span class="panel__status">SYNCED</span>
+          </div>
+
+          <div class="bars">
+            <div
+              class="bars__col"
+              *ngFor="let h of weeklyBars; let i = index"
+              [style.height.%]="h"
+              [style.animation-delay.ms]="i * 80"
+            ></div>
+          </div>
+
+          <div class="panel__footer">
+            <div class="kpi">
+              <span class="kpi__num">94.2%</span>
+              <span class="kpi__label">data quality</span>
+            </div>
+            <div class="kpi">
+              <span class="kpi__num">12</span>
+              <span class="kpi__label">sources merged</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

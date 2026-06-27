@@ -1,0 +1,16 @@
+<section class="projects" id="projects">
+  <div class="section__inner">
+    <p class="section__eyebrow">SIDE WORK</p>
+    <h2 class="section__title">Academic &amp; Independent Projects</h2>
+
+    <div class="projects__grid">
+      <article class="card" *ngFor="let p of projects">
+        <h3 class="card__title">{{ p.title }}</h3>
+        <p class="card__desc">{{ p.description }}</p>
+        <div class="card__tech">
+          <span class="chip" *ngFor="let t of p.tech">{{ t }}</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

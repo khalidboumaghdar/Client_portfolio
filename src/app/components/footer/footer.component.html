@@ -1,0 +1,24 @@
+<footer class="footer" id="contact">
+  <div class="footer__inner">
+    <div class="footer__main">
+      <h2 class="footer__heading">Let's talk data.</h2>
+      <p class="footer__text">
+        Open to Data Analyst roles and BI projects — reach out directly.
+      </p>
+
+      <div class="footer__links">
+        <a class="footer__link" [href]="'mailto:' + profile.email">
+          {{ profile.email }}
+        </a>
+        <a class="footer__link" [href]="'tel:' + profile.phone">
+          {{ profile.phone }}
+        </a>
+        <a class="footer__link" [href]="profile.linkedin" target="_blank" rel="noopener">
+          LinkedIn ↗
+        </a>
+      </div>
+    </div>
+
+    <p class="footer__copy">© {{ year }} {{ profile.name }}</p>
+  </div>
+</footer>

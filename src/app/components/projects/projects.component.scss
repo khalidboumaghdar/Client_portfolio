@@ -1,0 +1,67 @@
+.projects {
+  padding: 5rem 1.5rem;
+}
+
+.section__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin: 0 0 0.6rem;
+}
+
+.section__title {
+  font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+  margin-bottom: 2.6rem;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4rem;
+}
+
+.card {
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 1.6rem 1.5rem;
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-dim);
+}
+
+.card__title {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin-bottom: 0.7rem;
+}
+
+.card__desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.2rem;
+}
+
+.card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.chip {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 0.28rem 0.55rem;
+  border-radius: 4px;
+}

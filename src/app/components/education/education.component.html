@@ -1,0 +1,16 @@
+<section class="education" id="education">
+  <div class="section__inner">
+    <p class="section__eyebrow">ACADEMIC PATH</p>
+    <h2 class="section__title">Education</h2>
+
+    <div class="edu__list">
+      <div class="edu__item" *ngFor="let e of education">
+        <span class="edu__year">{{ e.year }}</span>
+        <div class="edu__body">
+          <h3 class="edu__title">{{ e.title }}</h3>
+          <p class="edu__institution">{{ e.institution }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

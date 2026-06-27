@@ -1,0 +1,41 @@
+<section class="experience" id="experience">
+  <div class="section__inner">
+    <p class="section__eyebrow">CAREER TIMELINE</p>
+    <h2 class="section__title">Professional Experience</h2>
+
+    <div class="timeline">
+      <div class="timeline__line" aria-hidden="true"></div>
+
+      <article
+        class="entry"
+        *ngFor="let exp of experiences; let i = index"
+        [class.entry--open]="isOpen(i)"
+      >
+        <div class="entry__marker" aria-hidden="true"></div>
+
+        <div class="entry__card">
+          <button class="entry__header" (click)="toggle(i)" [attr.aria-expanded]="isOpen(i)">
+            <div>
+              <span class="entry__period">{{ exp.period }}</span>
+              <h3 class="entry__role">{{ exp.role }}</h3>
+              <p class="entry__company">
+                {{ exp.company }}<span *ngIf="exp.client"> · client {{ exp.client }}</span>
+              </p>
+            </div>
+            <span class="entry__chevron" [class.entry__chevron--open]="isOpen(i)">↓</span>
+          </button>
+
+          <div class="entry__details" *ngIf="isOpen(i)">
+            <ul class="entry__list">
+              <li *ngFor="let r of exp.responsibilities">{{ r }}</li>
+            </ul>
+
+            <div class="entry__tech" *ngIf="exp.techStack">
+              <span class="tag" *ngFor="let t of exp.techStack">{{ t }}</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
